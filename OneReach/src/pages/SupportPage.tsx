@@ -406,7 +406,6 @@ export function SupportPage() {
               <p className="sp-cc-desc">Get answers immediately with our self-service options before raising a ticket.</p>
               {[
                 { label: 'Browse FAQs below', href: '#sp-faq' },
-                { label: 'Check system status', href: '#sp-trouble' },
                 { label: 'Privacy Policy', href: 'https://app.onereach.app/privacy' },
                 { label: 'Terms of Service', href: 'https://app.onereach.app/terms' },
               ].map(({ label, href }) => (
@@ -417,53 +416,6 @@ export function SupportPage() {
               ))}
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ════════════ HELP TOPICS ════════════ */}
-      <section className="sp-topics-sec" id="sp-topics" aria-labelledby="sp-topics-heading">
-        <div className="con">
-          <div className="sec-head fu">
-            <div className="lbl">Help Topics</div>
-            <h2 id="sp-topics-heading">
-              Find help by <span className="blue">topic.</span>
-            </h2>
-            <p>Browse the most common areas our users need help with, from onboarding to advanced pipeline management.</p>
-          </div>
-          <div className="sp-topics-grid" role="list">
-            {TOPICS.map((topic, i) => (
-              <article
-                key={topic.title}
-                className={`sp-topic-card fu${i > 0 ? ` d${Math.min(i, 4)}` : ''}`}
-                role="listitem"
-              >
-                <div className="sp-tc-top">
-                  <div className="sp-tc-icon" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <circle cx="10" cy="10" r="7" stroke={topic.iconColor} strokeWidth="1.4" opacity=".6"/>
-                      <circle cx="10" cy="10" r="3" fill={topic.iconColor} opacity=".4"/>
-                    </svg>
-                  </div>
-                  <span className="sp-tc-badge">{topic.badge}</span>
-                </div>
-                <div className="sp-tc-title">{topic.title}</div>
-                <p className="sp-tc-desc">{topic.desc}</p>
-                <div className="sp-tc-links" role="list" aria-label={`${topic.title} help links`}>
-                  {topic.links.map((link) => (
-                    <a
-                      key={link}
-                      href={`mailto:support@onereach.app?subject=${encodeURIComponent(link)}`}
-                      className="sp-tc-link"
-                      role="listitem"
-                    >
-                      <ArrowRight size={12} />
-                      {link}
-                    </a>
-                  ))}
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -506,84 +458,6 @@ export function SupportPage() {
         </div>
       </section>
 
-      {/* ════════════ TROUBLESHOOTING ════════════ */}
-      <section className="sp-trouble-sec" id="sp-trouble" aria-labelledby="sp-trouble-heading">
-        <div className="con">
-          <div className="sec-head fu">
-            <div className="lbl">Troubleshooting</div>
-            <h2 id="sp-trouble-heading">
-              Fix it in <span className="blue">5 steps.</span>
-            </h2>
-            <p>Before emailing support, try these steps — they resolve over 80% of reported issues immediately.</p>
-          </div>
-          <div className="sp-trouble-wrap">
-
-            {/* Left: steps */}
-            <div className="sp-trouble-left fu">
-              {TROUBLE_STEPS.map((step, i) => (
-                <div className="sp-trouble-step" key={i}>
-                  <div className="sp-ts-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div>
-                  <div className="sp-ts-body">
-                    <div className="sp-ts-title">{step.title}</div>
-                    <p className="sp-ts-desc">{step.desc}</p>
-                    <span className="sp-ts-tag">{step.tag}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Right: live system status */}
-            <div className="fu d2">
-              <div className="sp-status-card" role="region" aria-label="System status">
-                <div className="sp-sc-header">
-                  <span className="sp-sc-title">System Status</span>
-                  <div className="sp-sc-live">
-                    <span className="sp-sc-dot" aria-hidden="true" />
-                    All systems operational
-                  </div>
-                </div>
-                <div className="sp-sc-body">
-                  {STATUS_ITEMS.map(({ label, status, green }) => (
-                    <div className="sp-status-row" key={label}>
-                      <span className={`sp-sr-icon ${green ? 'green' : 'amber'}`} aria-hidden="true" />
-                      <span className="sp-sr-label">{label}</span>
-                      <span className={`sp-sr-status${green ? '' : ' degraded'}`}>{status}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="sp-sc-footer">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <circle cx="6" cy="6" r="5" stroke="currentColor" strokeWidth="1.2"/>
-                    <path d="M6 3.5V6l1.5 1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                  </svg>
-                  Last checked: just now · Updated automatically
-                </div>
-              </div>
-
-              {/* Still stuck card */}
-              <div style={{ marginTop: 16, padding: '22px 24px', background: 'var(--blue)', borderRadius: 20, boxShadow: 'var(--sh-blue)' }}>
-                <div style={{ fontSize: 16, fontWeight: 800, color: '#fff', marginBottom: 8 }}>Still stuck?</div>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,.72)', lineHeight: 1.7, marginBottom: 18 }}>
-                  If none of these steps resolved your issue, our support team is ready to help. Include your account email and a screenshot when possible.
-                </p>
-                <a
-                  href="mailto:support@onereach.app?subject=Support%20Request"
-                  className="btn-w"
-                  style={{ fontSize: 13, padding: '10px 20px' }}
-                >
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                    <path d="M2 3.5h10v8a.5.5 0 0 1-.5.5h-9A.5.5 0 0 1 2 11.5V3.5Z" stroke="currentColor" strokeWidth="1.2"/>
-                    <path d="M2 3.5l5 3.5 5-3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                  </svg>
-                  Email support@onereach.app
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ════════════ LEGAL LINKS ════════════ */}
       <section className="sp-legal-sec" id="sp-legal" aria-labelledby="sp-legal-heading">
         <div className="con">
@@ -620,19 +494,7 @@ export function SupportPage() {
               </div>
               <ArrowRight size={14} />
             </a>
-            <a href="https://app.onereach.app/privacy" className="sp-legal-card" target="_blank" rel="noopener noreferrer" aria-label="SMS Opt-In Policy">
-              <div className="sp-lc-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M4 5h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7l-4 2V6a1 1 0 0 1 1-1Z" stroke="#059669" strokeWidth="1.4" strokeLinejoin="round"/>
-                  <path d="M7 9h6M7 12h3" stroke="#059669" strokeWidth="1.3" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div>
-                <div className="sp-lc-title">SMS Opt-In Policy</div>
-                <div className="sp-lc-desc">SMS messaging consent and opt-out instructions</div>
-              </div>
-              <ArrowRight size={14} />
-            </a>
+
           </div>
         </div>
       </section>
@@ -682,13 +544,13 @@ export function SupportPage() {
               <a href="/support">Help Center</a>
               <a href="#sp-faq">FAQs</a>
               <a href="mailto:support@onereach.app">Contact Support</a>
-              <a href="#sp-trouble">Troubleshooting</a>
+
             </nav>
             <nav className="sp-fc" aria-label="Legal links">
               <h4>Legal</h4>
               <a href="https://app.onereach.app/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
               <a href="https://app.onereach.app/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-              <a href="https://app.onereach.app/privacy" target="_blank" rel="noopener noreferrer">SMS Opt-In</a>
+
             </nav>
           </div>
           <div className="sp-fbot">
