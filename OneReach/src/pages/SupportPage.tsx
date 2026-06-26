@@ -201,8 +201,8 @@ export function SupportPage() {
         <div className="sp-hero-glow sp-hg2" aria-hidden="true" />
         <div className="sp-hero-body">
 
-          {/* Left */}
-          <div className="sp-hero-left">
+          {/* Center */}
+          <div className="sp-hero-left sp-hero-center">
             <div className="sp-h-pill">
               <span className="sp-h-dot" aria-hidden="true" />
               <span>OneReach Support</span>
@@ -241,81 +241,6 @@ export function SupportPage() {
                   <span>{text}</span>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Right: animated support chat visual */}
-          <div className="sp-hero-right" aria-hidden="true">
-            {/* Floating badges */}
-            <div className="sp-badge sp-b1">
-              <div className="sp-badge-icon" style={{ background: '#EEF2FF' }}>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <circle cx="7" cy="7" r="6" stroke="#1E3DB4" strokeWidth="1.3"/>
-                  <path d="M7 5v3M7 9.5v.5" stroke="#1E3DB4" strokeWidth="1.3" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <span className="sp-badge-dot" />
-              <span>Issue resolved</span>
-            </div>
-            <div className="sp-badge sp-b2">
-              <div className="sp-badge-icon" style={{ background: 'rgba(5,150,105,.1)' }}>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <circle cx="7" cy="7" r="5.5" stroke="#059669" strokeWidth="1.3"/>
-                  <path d="M4.5 7l2 2 3-3" stroke="#059669" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <span className="sp-badge-dot" />
-              <span>Reply sent</span>
-            </div>
-            <div className="sp-badge sp-b3">
-              <div className="sp-badge-icon" style={{ background: 'rgba(124,58,237,.08)' }}>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1.5c-3 0-5.5 2.2-5.5 5 0 1 .3 2 .8 2.8L1.5 12.5l3.3-.9c.7.3 1.4.5 2.2.5 3 0 5.5-2.2 5.5-5s-2.5-5-5.5-5Z" stroke="#7C3AED" strokeWidth="1.2"/>
-                </svg>
-              </div>
-              <span className="sp-badge-dot" />
-              <span>Avg. reply: 4h</span>
-            </div>
-
-            {/* Chat panel */}
-            <div className="sp-support-panel">
-              <div className="sp-panel-header">
-                <div className="sp-panel-av">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <circle cx="11" cy="8" r="4" stroke="white" strokeWidth="1.5"/>
-                    <path d="M3 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="sp-panel-name">OneReach Support</div>
-                  <div className="sp-panel-role">support@onereach.app</div>
-                </div>
-                <div className="sp-panel-status">
-                  <span className="sp-panel-dot" />Online
-                </div>
-              </div>
-              <div className="sp-panel-body">
-                <div className="sp-chat-msg agent">
-                  <div className="sp-chat-meta">Support Team</div>
-                  Hi! 👋 How can we help you with OneReach today?
-                </div>
-                <div className="sp-chat-msg user">
-                  <div className="sp-chat-meta">You</div>
-                  My sequences stopped sending after credits ran out.
-                </div>
-                <div className="sp-chat-msg agent">
-                  <div className="sp-chat-meta">Support Team</div>
-                  No worries — your data is safe. Top up your credits and Sophia will resume exactly where she left off. 🚀
-                </div>
-              </div>
-              <div className="sp-panel-footer">
-                <div className="sp-panel-input">Type your question…</div>
-                <div className="sp-panel-send">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M2 7h10M9 4l3 3-3 3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </div>
