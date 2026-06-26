@@ -44,10 +44,6 @@ const FAQS = [
     q: 'Can I upload a list of target companies or contacts?',
     a: 'Yes. Go to List Management → Import and upload a CSV with company names or domains. Sophia will enrich each entry using Apollo and PDL data, then run your chosen research tier on each company. Contact imports are supported under Contacts → Import with a matching CSV template.',
   },
-  {
-    q: 'How do I cancel or change my subscription?',
-    a: 'Open Settings → Billing → Manage Subscription to access your Stripe billing portal. You can upgrade, downgrade, or cancel anytime. Upgrades take effect immediately (prorated). Downgrades apply at the end of your current billing period. There are no cancellation fees.',
-  },
 ];
 
 /* ── Help topic cards ─────────────────────────── */
