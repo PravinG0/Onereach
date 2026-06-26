@@ -18,7 +18,7 @@ const ArrowRight = ({ size = 14 }: { size?: number }) => (
 const FAQS = [
   {
     q: 'How do I get started with OneReach?',
-    a: 'Sign up for a free Startup account — no credit card required. You\'ll receive 500 free credits each month. Once logged in, connect your LinkedIn, Gmail or Outlook account, define your Ideal Customer Profile (ICP), and Sophia will start discovering and researching companies immediately.',
+    a: 'Sign up for a free Startup account — connect your LinkedIn, Gmail, or Outlook account, define your Target Persona (Industry, Location, Seniority Level, Department, and Company Size), and Sophia will immediately start discovering and researching matching companies.',
   },
   {
     q: 'How do I reset or recover my password?',
@@ -30,11 +30,11 @@ const FAQS = [
   },
   {
     q: 'Why are my outreach sequences not sending?',
-    a: 'The most common cause is a depleted credit balance — Sophia pauses all credit-consuming actions when credits run out. Check your credit balance in the dashboard. If credits are available, verify that your connected email/LinkedIn account is still authorised under Settings → Integrations.',
+    a: 'The most common cause is a depleted credit balance — Sophia pauses all credit-consuming actions when credits run out. Check your credit balance in the dashboard. If credits are available, verify that your connected email/LinkedIn account is still authorised under Settings → Connected Device.',
   },
   {
     q: 'How do I connect my LinkedIn account?',
-    a: 'Navigate to Settings → Integrations → LinkedIn and follow the OAuth authorisation flow. Sophia requires access to send connection requests and InMail on your behalf. If you see an authorisation error, try disconnecting and reconnecting, or clear your browser cookies before retrying.',
+    a: 'Navigate to Settings → Connected Device → LinkedIn and follow the OAuth authorisation flow. Sophia requires access to send connection requests and InMail on your behalf. If you see an authorisation error, try disconnecting and reconnecting, or clear your browser cookies before retrying.',
   },
   {
     q: 'What counts as a credit and how are they deducted?',
@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: 'Can I upload a list of target companies or contacts?',
-    a: 'Yes. Go to Companies → Import and upload a CSV with company names or domains. Sophia will enrich each entry using Apollo and PDL data, then run your chosen research tier on each company. Contact imports are supported under Contacts → Import with a matching CSV template.',
+    a: 'Yes. Go to List Management → Import and upload a CSV with company names or domains. Sophia will enrich each entry using Apollo and PDL data, then run your chosen research tier on each company. Contact imports are supported under Contacts → Import with a matching CSV template.',
   },
   {
     q: 'How do I cancel or change my subscription?',
