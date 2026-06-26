@@ -204,10 +204,9 @@ export function SupportPage() {
               <span>OneReach Support</span>
             </div>
             <h1 className="sp-hero-h1" id="sp-hero-heading">
-              We're here<span className="accent blue"> when you</span>
-              <span className="accent">need us.</span>
-              <span className="sub">Fast, friendly, expert help.</span>
+              We're here <span className="accent blue">when you need us.</span>
             </h1>
+            <p className="sp-hero-tagline">Fast, friendly, expert help.</p>
             <p className="sp-hero-desc">
               Get help with your OneReach account, Sophia AI sequences, integrations,
               credits, and billing — from our expert support team.
