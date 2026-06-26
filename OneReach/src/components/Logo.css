@@ -1,0 +1,21 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-svg {
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0B1535;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.logo-text-highlight {
+  color: #1E3DB4;
+}
